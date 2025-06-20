@@ -3,7 +3,7 @@ import style from './Project.module.css';
 const Project = ({project}) => {
     return (
         <div className={style.project}>
-            <h2>Social Network</h2>
+            <h2>{project.name}</h2>
             <p>{project.description}</p>
             <a href={project.link} target="_blank">Link</a>
             <span>Tags({project.tags.length}):</span>

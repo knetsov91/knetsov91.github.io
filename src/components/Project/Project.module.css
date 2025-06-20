@@ -20,3 +20,9 @@
     font-size: 0.9em;
     color: #408696;
 }
+.tags {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}

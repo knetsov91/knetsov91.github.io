@@ -4,7 +4,7 @@ const Project = ({project}) => {
     return (
         <div className={style.project}>
             <h2>{project.name}</h2>
-            <p>{project.description}</p>
+            <p>{project.description || <span>There is no description yet</span> }</p>
             <a href={project.link} target="_blank">Link</a>
             <span>Tags({project.tags.length}):</span>
             <div className={style.tags}>

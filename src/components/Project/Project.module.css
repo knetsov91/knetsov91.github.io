@@ -37,6 +37,10 @@
     background-color: #dda6a6;
 }
 
+.project:hover h2 {
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 400px) {
     .project {
         width: 60vw;

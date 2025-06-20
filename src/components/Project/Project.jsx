@@ -3,10 +3,11 @@ import style from './Project.module.css';
 const Project = ({project}) => {
     return (
         <div className={style.project}>
-            <h2>Social Network</h2>
-            <p>{project.description}</p>
+            <h2>{project.name}</h2>
+            <p>{project.description || <span>There is no description yet</span> }</p>
             <a href={project.link} target="_blank">Link</a>
-            <div className="project-tags">
+            <span>Tags(<b>{project.tags.length}</b>):</span>
+            <div className={style.tags}>
                 {
                     project.tags.map(( tag) => {
                         return <span className={style.tag}

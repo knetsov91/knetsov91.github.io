@@ -4,11 +4,11 @@
     align-items: center;
     padding: 20px;
     margin: 20px;
-    background-color: #d56363;
+    background-color: #eacece;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 300px;
-    width: 300px;
+    width: 80%;
 }
 
 .tag {
@@ -19,4 +19,39 @@
     border-radius: 4px;
     font-size: 0.9em;
     color: #408696;
+}
+.tags {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.project a {
+    color: #408696;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.project:hover {
+    background-color: #dda6a6;
+}
+
+.project:hover h2 {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 400px) {
+    .project {
+        width: 60vw;
+    }
+    .tags {
+        width: 100%;
+        overflow-y: scroll;
+
+    }
+    
+    .project h2 {
+        font-size: 1.2em;
+    }
 }

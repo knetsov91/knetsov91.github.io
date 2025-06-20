@@ -32,3 +32,18 @@
     font-size: larger;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 400px) {
+    .project {
+        width: 60vw;
+    }
+    .tags {
+        width: 100%;
+        overflow-y: scroll;
+
+    }
+    
+    .project h2 {
+        font-size: 1.2em;
+    }
+}

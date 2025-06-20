@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "name": "Social Network",
+        "description": "A social network application built with React, AWS, and TypeScript.",
+        "tags": ["Java", "Spring Boot", "Microservices",
+         "OpenAPI", "REST", "Hibernate",
+         "Gradle", "Unit testing",
+         "Integration testing", "Git", "Redis",
+         "Kafka", "WebSocket", "MySQL",
+         "Docker", "JWT", "ReactJS",
+          "Prometheus", "Grafana"],
+        "link": "https://github.com/knetsov91/social-network"
+    },
+    {
+        "id": 2,
+        "name": "Restaurant management",
+        "description": "",
+        "tags": ["Java", "Spring Boot", "Hibernate",
+         "Gradle", "OpenAPI", "CI",
+         "GitHub Actions", "Unit Testing",
+          "Integration Testing" ,
+         "REST", "PostgreSQL"],
+        "link": "https://github.com/knetsov91/restaurant"
+    },
+     {
+        "id": 3,
+        "name": "Online seller",
+        "description": "",
+        "tags": ["Python", "Git", "PostgreSQL",
+         "ReactJS", "Full-stack", "SQLAlchemy",
+          "JWT", "CI", "GitHub Actions",
+          "Docker"],
+        "link": "https://github.com/knetsov91/fastapi-react-postgresql"
+    },
+    {
+        "id": 4,
+        "name": "Project management",
+        "description": "",
+        "tags": ["Java", "Spring Boot", "Hibernate",
+         "Gradle", "MySQL", "Docker",
+          "Kubernetes", "CI", "GitHub Actions",
+         "AWS", "IaaC", "CDK", "Git", "SonarQube",
+          "Testing"],
+        "link": "https://github.com/knetsov91/k8s-spring-boot"
+    },
+    {
+        "id": 5,
+        "name": "Named Entity Recognition",
+        "description": "",
+        "tags": ["Python", "FastAPI", "Pytest",
+         "REST", "Docker", "PostgreSQL",
+          "SQLAlchemy", "CI", "Git",
+           "GitHub Actions", "ReactJS"],
+        "link": "https://github.com/knetsov91/python-react-NER-project"
+    },
+    {
+        "id": 6,
+        "name": "Express RESTful API with Angular",
+        "description": "",
+        "tags": ["NodeJS", "Express", "Jest",
+         "JWT", "Angular", "MySQL",
+         "SQL", "Docker", "Azure",
+          "Terraform", "IaaC", "CI",
+           "GitHub Actions" ],
+        "link": "https://github.com/knetsov91/angular-rest"
+    },
+    {
+        "id": 7,
+        "name": "Provisioning Azure resources with Terraform",
+        "description": "",
+        "tags": ["Azure", "GitHub Actions",
+         "Terraform", "IaaC"],
+        "link": "https://github.com/knetsov91/azure-terraform"
+    }
+]

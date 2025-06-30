@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Social Network",
-        "description": "A social network application built with React, AWS, and TypeScript.",
+        "description": "A social network application built with Java, React, AWS and TypeScript.",
         "tags": ["Java", "Spring Boot", "Microservices",
          "OpenAPI", "REST", "Hibernate",
          "Gradle", "Unit testing",

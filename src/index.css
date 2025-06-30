@@ -36,6 +36,10 @@ body {
   min-height: 100vh;
 }
 
+
+.mob {
+    color: #cb4f4f;
+}
 .react {
   display: flex;
   justify-content: center;

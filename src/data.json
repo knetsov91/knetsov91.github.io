@@ -14,6 +14,15 @@
     },
     {
         "id": 2,
+        "name": "E-Shop",
+        "description": "",
+        "tags": ["Java", "Observability",
+         "NoSQL", "Prometheus", "Microservices",
+        "PostgreSQL", "Docker"],
+        "link": "https://github.com/knetsov91/e-shop"
+    },
+    {
+        "id": 3,
         "name": "Restaurant management",
         "description": "",
         "tags": ["Java", "Spring Boot", "Hibernate",
@@ -24,7 +33,7 @@
         "link": "https://github.com/knetsov91/restaurant"
     },
      {
-        "id": 3,
+        "id": 4,
         "name": "Online seller",
         "description": "",
         "tags": ["Python", "Git", "PostgreSQL",
@@ -34,7 +43,7 @@
         "link": "https://github.com/knetsov91/fastapi-react-postgresql"
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Project management",
         "description": "",
         "tags": ["Java", "Spring Boot", "Hibernate",
@@ -45,7 +54,7 @@
         "link": "https://github.com/knetsov91/k8s-spring-boot"
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Named Entity Recognition",
         "description": "",
         "tags": ["Python", "FastAPI", "Pytest",
@@ -55,7 +64,7 @@
         "link": "https://github.com/knetsov91/python-react-NER-project"
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Express RESTful API with Angular",
         "description": "",
         "tags": ["NodeJS", "Express", "Jest",
@@ -66,11 +75,12 @@
         "link": "https://github.com/knetsov91/angular-rest"
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Provisioning Azure resources with Terraform",
         "description": "",
         "tags": ["Azure", "GitHub Actions",
          "Terraform", "IaaC"],
         "link": "https://github.com/knetsov91/azure-terraform"
     }
+    
 ]

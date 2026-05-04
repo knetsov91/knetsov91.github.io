@@ -17,20 +17,23 @@ const Project = ({project}) => {
     }, []);
     return (
         <div className={style.project}>
-            <h2>{project.name}</h2>
-            <span>Created at: <b>{createdAt}</b></span>
-            <span>Last update: <b>{updatedAt}</b></span>
-            <p className={style.description}>{project.description || <span>There is no description yet</span> }</p>
-            <a href={project.link} target="_blank">Link</a>
-            <span>Tags(<b>{project.tags.length}</b>):</span>
-            <div className={style.tags}>
-                {
-                    project.tags.map(( tag) => {
-                        return <span className={style.tag}
-                         key={tag}>{tag}</span>;
-                    })
-                } 
+            <div className={style.header}>
+                <h2>{project.name}</h2>
+                <div className={style.dates}>
+                    <span>Created at: <b>{createdAt}</b></span>
+                    <span>Last update: <b>{updatedAt}</b></span>
+                </div>
             </div>
+            <div className={style.tagsSection}>
+                <span>Technologies:</span>
+                <div className={style.tags}>
+                    {project.tags.map((tag) => (
+                        <span className={style.tag} key={tag}>{tag}</span>
+                    ))}
+                </div>
+            </div>
+            <p className={style.description}>{project.description || <span>There is no description yet</span>}</p>
+            <a href={project.link} target="_blank">Link</a>
         </div>
     );
 }

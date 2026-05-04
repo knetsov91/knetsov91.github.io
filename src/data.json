@@ -24,7 +24,7 @@
     {
         "id": 3,
         "name": "Restaurant management",
-        "description": "",
+        "description": "Restaurant management system built with Java, Spring Boot, and Spring Security. Implements 3-tier architecture with PostgreSQL persistence via Hibernate/Spring Data JPA. Includes unit, integration, and web layer tests. Dockerized for deployment.",
         "tags": ["Java", "Spring Boot", "Hibernate",
          "Gradle", "OpenAPI", "CI",
          "GitHub Actions", "Unit Testing",

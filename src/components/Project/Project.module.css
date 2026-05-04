@@ -31,6 +31,9 @@
     flex-wrap: wrap;
     overflow: scroll;
 }
+.description {
+    text-align: justify;
+}
 .project a {
     color: #408696;
     text-decoration: none;

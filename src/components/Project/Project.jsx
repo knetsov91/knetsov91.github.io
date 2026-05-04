@@ -25,7 +25,7 @@ const Project = ({project}) => {
                 </div>
             </div>
             <div className={style.tagsSection}>
-                <span>Technologies:</span>
+                <span><b>Technologies:</b></span>
                 <div className={style.tags}>
                     {project.tags.map((tag) => (
                         <span className={style.tag} key={tag}>{tag}</span>

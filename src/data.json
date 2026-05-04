@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "E-Shop",
-        "description": "",
+        "description": "E-shop built on microservice architecture using Java, Spring Boot, and Kafka. Services use PostgreSQL and MongoDB for persistence, Traefik for routing, and Consul for service discovery. Observability stack includes Prometheus, Grafana, Elasticsearch, and Kibana. Dockerized for deployment.",
         "tags": ["Java", "Observability",
          "NoSQL", "Prometheus", "Microservices",
         "PostgreSQL", "Docker"],

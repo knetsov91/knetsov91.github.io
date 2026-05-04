@@ -12,6 +12,7 @@ export const fetchRepoData = (fetchUrl) => {
   return axios.get(`${fetchUrl}`)
         .then(( response ) => response.data)
         .catch(err => {
-            console.log(err)
-        }) 
+            console.log(err);
+            throw err;
+        })
 }

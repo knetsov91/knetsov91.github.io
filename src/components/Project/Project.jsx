@@ -4,15 +4,19 @@ import style from './Project.module.css';
 import { fetchRepoData, generateRepoUrl } from '../../utils/util';
 
 const Project = ({project}) => {
-    const [createdAt, setCreatedAt] = useState(null) 
-    const [updatedAt, setUpdatedAt] = useState(null) 
+    const [createdAt, setCreatedAt] = useState('N/A')
+    const [updatedAt, setUpdatedAt] = useState('N/A')
     const fetchUrl = generateRepoUrl(project.link);
- 
+
     useEffect(() => {
        fetchRepoData(fetchUrl)
-       .then((data) => { 
+       .then((data) => {
             setCreatedAt(new Date(data.created_at).toLocaleDateString());
             setUpdatedAt(new Date(data.updated_at).toLocaleDateString());
+       })
+       .catch(() => {
+            setCreatedAt('N/A');
+            setUpdatedAt('N/A');
        });
     }, []);
     return (

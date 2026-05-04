@@ -5,20 +5,19 @@
         "description": "A social network application built with Java, React, AWS and TypeScript.",
         "tags": ["Java", "Spring Boot", "Microservices",
          "OpenAPI", "REST", "Hibernate",
-         "Gradle", "Unit testing",
-         "Integration testing", "Git", "Redis",
-         "Kafka", "WebSocket", "MySQL",
-         "Docker", "JWT", "ReactJS",
-          "Prometheus", "Grafana"],
+         "Gradle", "JUnit", "Redis", "Kafka", "WebSocket",
+         "MySQL", "Docker", "JWT",
+         "ReactJS", "Prometheus", "Grafana"],
         "link": "https://github.com/knetsov91/social-network"
     },
     {
         "id": 2,
         "name": "E-Shop",
         "description": "E-shop built on microservice architecture using Java, Spring Boot, and Kafka. Services use PostgreSQL and MongoDB for persistence, Traefik for routing, and Consul for service discovery. Observability stack includes Prometheus, Grafana, Elasticsearch, and Kibana. Dockerized for deployment.",
-        "tags": ["Java", "Observability",
-         "NoSQL", "Prometheus", "Microservices",
-        "PostgreSQL", "Docker"],
+        "tags": ["Java", "Spring Boot", "Microservices",
+         "Kafka", "PostgreSQL", "MongoDB",
+         "Docker", "Traefik", "Consul",
+         "Prometheus", "Grafana", "Elasticsearch", "Kibana"],
         "link": "https://github.com/knetsov91/e-shop"
     },
     {
@@ -26,20 +25,17 @@
         "name": "Restaurant management",
         "description": "Restaurant management system built with Java, Spring Boot, and Spring Security. Implements 3-tier architecture with PostgreSQL persistence via Hibernate/Spring Data JPA. Includes unit, integration, and web layer tests. Dockerized for deployment.",
         "tags": ["Java", "Spring Boot", "Hibernate",
-         "Gradle", "OpenAPI", "CI",
-         "GitHub Actions", "Unit Testing",
-          "Integration Testing" ,
-         "REST", "PostgreSQL"],
+         "Gradle", "OpenAPI", "REST",
+         "GitHub Actions", "JUnit", "PostgreSQL"],
         "link": "https://github.com/knetsov91/restaurant"
     },
      {
         "id": 4,
         "name": "Online seller",
         "description": "",
-        "tags": ["Python", "Git", "PostgreSQL",
-         "ReactJS", "Full-stack", "SQLAlchemy",
-          "JWT", "CI", "GitHub Actions",
-          "Docker"],
+        "tags": ["Python", "FastAPI", "PostgreSQL",
+         "ReactJS", "SQLAlchemy", "JWT",
+         "GitHub Actions", "Docker"],
         "link": "https://github.com/knetsov91/fastapi-react-postgresql"
     },
     {
@@ -48,9 +44,8 @@
         "description": "",
         "tags": ["Java", "Spring Boot", "Hibernate",
          "Gradle", "MySQL", "Docker",
-          "Kubernetes", "CI", "GitHub Actions",
-         "AWS", "IaaC", "CDK", "Git", "SonarQube",
-          "Testing"],
+         "Kubernetes", "GitHub Actions",
+         "AWS", "IaC", "CDK", "SonarQube", "JUnit"],
         "link": "https://github.com/knetsov91/k8s-spring-boot"
     },
     {
@@ -59,8 +54,7 @@
         "description": "",
         "tags": ["Python", "FastAPI", "Pytest",
          "REST", "Docker", "PostgreSQL",
-          "SQLAlchemy", "CI", "Git",
-           "GitHub Actions", "ReactJS"],
+         "SQLAlchemy", "GitHub Actions", "ReactJS"],
         "link": "https://github.com/knetsov91/python-react-NER-project"
     },
     {
@@ -69,9 +63,8 @@
         "description": "",
         "tags": ["NodeJS", "Express", "Jest",
          "JWT", "Angular", "MySQL",
-         "SQL", "Docker", "Azure",
-          "Terraform", "IaaC", "CI",
-           "GitHub Actions" ],
+         "Docker", "Azure", "Terraform",
+         "IaC", "GitHub Actions"],
         "link": "https://github.com/knetsov91/angular-rest"
     },
     {
@@ -79,7 +72,7 @@
         "name": "Provisioning Azure resources with Terraform",
         "description": "",
         "tags": ["Azure", "GitHub Actions",
-         "Terraform", "IaaC"],
+         "Terraform", "IaC"],
         "link": "https://github.com/knetsov91/azure-terraform"
     }
     

@@ -33,7 +33,7 @@ const Project = ({project}) => {
                 </div>
             </div>
             <p className={style.description}>{project.description || <span>There is no description yet</span>}</p>
-            <a href={project.link} target="_blank">Link</a>
+            <a href={project.link} target="_blank">View on GitHub</a>
         </div>
     );
 }

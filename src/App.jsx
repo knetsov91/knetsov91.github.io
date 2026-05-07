@@ -1,5 +1,6 @@
-import './App.css' 
+import './App.css'
 import Projects from './components/Projects/Projects'
+import About from './components/About/About'
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       </div>
         <p className="mob"><b>NOTE: View on mobile device too</b></p>
       <div className="main">
+        <About />
+        <h2 className="sectionTitle">Projects</h2>
         <Projects />
       </div>
     </>

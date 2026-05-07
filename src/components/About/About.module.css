@@ -1,0 +1,100 @@
+.about {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.section {
+    background-color: #f5e6e6;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.section h2 {
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #b07a7a;
+    padding-bottom: 8px;
+}
+
+.bio {
+    color: #4a5568;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+.eduList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.eduItem {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.institution {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.degree {
+    color: #4a5568;
+}
+
+.period {
+    color: #718096;
+    font-size: 0.9em;
+}
+
+.certGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.cert {
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    box-sizing: border-box;
+}
+
+.certName {
+    color: #2b6cb0;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.certDate {
+    color: #718096;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 440px) {
+    .about {
+        width: calc(100% - 32px);
+        margin: 12px 0;
+    }
+
+    .certGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        font-size: 0.9em;
+    }
+}

@@ -32,7 +32,7 @@
      {
         "id": 4,
         "name": "Online seller",
-        "description": "",
+        "description": "Full-stack online seller application with a ReactJS frontend and Python FastAPI backend. Uses SQLAlchemy ORM with PostgreSQL for persistence and JWT for authentication. Both services are containerized with Docker and tested via GitHub Actions CI.",
         "tags": ["Python", "FastAPI", "PostgreSQL",
          "ReactJS", "SQLAlchemy", "JWT",
          "GitHub Actions", "Docker"],
@@ -41,7 +41,7 @@
     {
         "id": 5,
         "name": "Project management",
-        "description": "",
+        "description": "RESTful project management API built with Java and Spring Boot, secured with JWT and backed by MySQL via Spring Data JPA. Includes a ReactJS frontend, SonarQube code quality analysis, and JaCoCo test coverage. Deployed on AWS Fargate using CDK infrastructure as code, with CI/CD managed through GitHub Actions.",
         "tags": ["Java", "Spring Boot", "Hibernate",
          "Gradle", "MySQL", "Docker",
          "Kubernetes", "GitHub Actions",
@@ -51,7 +51,7 @@
     {
         "id": 6,
         "name": "Named Entity Recognition",
-        "description": "",
+        "description": "Exposes a spaCy Named Entity Recognition model as a REST API using Python and FastAPI, consumed by a ReactJS single-page application. Persists data in PostgreSQL via SQLAlchemy. Backend and database are containerized with Docker and tested with Pytest via GitHub Actions.",
         "tags": ["Python", "FastAPI", "Pytest",
          "REST", "Docker", "PostgreSQL",
          "SQLAlchemy", "GitHub Actions", "ReactJS"],
@@ -60,7 +60,7 @@
     {
         "id": 7,
         "name": "Express RESTful API with Angular",
-        "description": "",
+        "description": "RESTful API built with Node.js and Express, using raw SQL against MySQL. Angular SPA frontend served behind an Nginx reverse proxy, both containerized with Docker. Includes JWT authentication, CI pipelines for both frontend and backend via GitHub Actions, and Azure infrastructure provisioned with Terraform.",
         "tags": ["NodeJS", "Express", "Jest",
          "JWT", "Angular", "MySQL",
          "Docker", "Azure", "Terraform",
@@ -70,7 +70,7 @@
     {
         "id": 8,
         "name": "Provisioning Azure resources with Terraform",
-        "description": "",
+        "description": "Infrastructure as Code project that provisions Azure cloud resources using Terraform for deploying a containerized application. Automated via GitHub Actions for repeatable, version-controlled deployments.",
         "tags": ["Azure", "GitHub Actions",
          "Terraform", "IaC"],
         "link": "https://github.com/knetsov91/azure-terraform"

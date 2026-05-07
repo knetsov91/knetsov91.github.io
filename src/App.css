@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+
+.sectionTitle {
+  width: 80%;
+  text-align: left;
+  color: #2d3748;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 32px 0 12px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #b07a7a;
+}

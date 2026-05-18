@@ -46,7 +46,7 @@
          "Gradle", "MySQL", "Docker",
          "Kubernetes", "GitHub Actions",
          "AWS", "IaC", "CDK", "SonarQube", "JUnit"],
-        "link": "https://github.com/knetsov91/k8s-spring-boot"
+        "link": "https://github.com/knetsov91/project-management"
     },
     {
         "id": 6,

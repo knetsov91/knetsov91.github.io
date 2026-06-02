@@ -23,7 +23,7 @@
     {
         "id": 3,
         "name": "Restaurant management",
-        "description": "Restaurant management system built with Java, Spring Boot, and Spring Security. Implements 3-tier architecture with PostgreSQL persistence via Hibernate/Spring Data JPA. Includes unit, integration, and web layer tests. Dockerized for deployment.",
+        "description": "Restaurant management system built with Java 17 and Spring Boot. Works alongside a separate order-service, communicating synchronously via OpenFeign with scheduled polling. Access control is handled by Spring Security 6 with role-based permissions. Data is persisted in PostgreSQL through Hibernate/Spring Data JPA. Covered by unit, integration, and web layer tests, with a GitHub Actions pipeline running on every push. Dockerized for deployment.",
         "tags": ["Java", "Spring Boot", "Hibernate",
          "Gradle", "OpenAPI", "REST",
          "GitHub Actions", "JUnit", "PostgreSQL"],

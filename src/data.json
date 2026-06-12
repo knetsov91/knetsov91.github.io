@@ -22,6 +22,13 @@
     },
     {
         "id": 3,
+        "name": "Multimodal Search",
+        "description": "The project follows a 3-tier architecture — Jinja2 templates on the presentation layer, FastAPI with a services layer handling business logic and PostgreSQL/Milvus/MinIO as the data tier. The backend is organized around an MVC pattern where endpoints act as controllers, SQLAlchemy models and Pydantic schemas handle the model layer and Jinja2 templates serve as views. Built a two-stage multimodal retrieval system in Python combining dense vector search with vision-language reranking. Each stage depends on an abstract interface — BaseRetrieval and BaseReranker — so the current models (CLIP for retrieval and Qwen3-VL-4B-Instruct for reranking) can be swapped out without changing the pipeline. The first stage uses CLIP model to encode text and image queries, fuses the similarity scores and retrieves top candidates from Milvus a vector database optimized for similarity search. The second stage runs Qwen3-VL-4B-Instruct with quantization to visually score each result against the original query. The whole system is containerized with Docker Compose with NVIDIA GPU support, uses FastAPI as the web framework, PostgreSQL for relational data and MinIO as S3-compatible object storage for images.",
+        "tags": ["Python", "FastAPI", "PostgreSQL", "Docker", "GPU", "MVC", "Vector Search", "Multimodal", "Milvus", "MinIO", "AI"],
+        "link": "https://github.com/knetsov91/multimodal_search"
+    },
+    {
+        "id": 4,
         "name": "Restaurant management",
         "description": "Restaurant management system built with Java 17 and Spring Boot. Works alongside a separate order-service, communicating synchronously via OpenFeign with scheduled polling. Access control is handled by Spring Security 6 with role-based permissions. Data is persisted in PostgreSQL through Hibernate/Spring Data JPA. Covered by unit, integration, and web layer tests, with a GitHub Actions pipeline running on every push and dockerized for deployment.",
         "tags": ["Java", "Spring Boot", "Hibernate",
@@ -30,7 +37,7 @@
         "link": "https://github.com/knetsov91/restaurant"
     },
      {
-        "id": 4,
+        "id": 5,
         "name": "Online seller",
         "description": "Full-stack online seller application with a ReactJS frontend and Python FastAPI backend. Uses SQLAlchemy ORM with PostgreSQL for persistence and JWT for authentication. Both services are containerized with Docker and tested via GitHub Actions CI.",
         "tags": ["Python", "FastAPI", "PostgreSQL",
@@ -39,7 +46,7 @@
         "link": "https://github.com/knetsov91/fastapi-react-postgresql"
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Project management",
         "description": "RESTful project management API built with Java and Spring Boot, secured with JWT and backed by MySQL via Spring Data JPA. Includes a ReactJS frontend, SonarQube code quality analysis, and JaCoCo test coverage. Deployed on AWS Fargate using CDK infrastructure as code, with CI/CD managed through GitHub Actions.",
         "tags": ["Java", "Spring Boot", "Hibernate",
@@ -49,7 +56,7 @@
         "link": "https://github.com/knetsov91/project-management"
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Named Entity Recognition",
         "description": "Exposes a spaCy Named Entity Recognition model as a REST API using Python and FastAPI, consumed by a ReactJS single-page application. Persists data in PostgreSQL via SQLAlchemy. Backend and database are containerized with Docker and tested with Pytest via GitHub Actions.",
         "tags": ["Python", "FastAPI", "Pytest",
@@ -58,7 +65,7 @@
         "link": "https://github.com/knetsov91/python-react-NER-project"
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Express RESTful API with Angular",
         "description": "RESTful API built with Node.js and Express, using raw SQL against MySQL. Angular SPA frontend served behind an Nginx reverse proxy, both containerized with Docker. Includes JWT authentication, CI pipelines for both frontend and backend via GitHub Actions, and Azure infrastructure provisioned with Terraform.",
         "tags": ["NodeJS", "Express", "Jest",
@@ -68,7 +75,7 @@
         "link": "https://github.com/knetsov91/angular-rest"
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "Provisioning Azure resources with Terraform",
         "description": "Infrastructure as Code project that provisions Azure cloud resources using Terraform for deploying a containerized application. Automated via GitHub Actions for repeatable, version-controlled deployments.",
         "tags": ["Azure", "GitHub Actions",

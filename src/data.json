@@ -2,12 +2,13 @@
     {
         "id": 1,
         "name": "Social Network",
-        "description": "A social network backend built as independent microservices using Spring Boot 3 and Java 21. Services register with Netflix Eureka; all traffic routes through Spring Cloud Gateway with JWT cookie authentication and Redis-backed rate limiting. Users can post, like, follow, and chat in real time — Kafka handles async events between services, STOMP over WebSocket powers live chat and presence tracking. Each service has its own database: PostgreSQL for posts, MySQL for users, MongoDB for chat. Secrets are managed through HashiCorp Vault. Observability stack includes Prometheus with custom metrics, Grafana, and distributed tracing via OpenTelemetry and Jaeger. Covered by unit and integration tests with CI on GitHub Actions.",
+        "description": "A social network backend built as independent microservices using Spring Boot 3 and Java 21. Services register with Netflix Eureka; all traffic routes through Spring Cloud Gateway with JWT cookie authentication and Redis-backed rate limiting. Users can post, like, follow, and chat in real time — Kafka handles async events between services, STOMP over WebSocket powers live chat and presence tracking. Services communicate synchronously via OpenFeign with Resilience4j circuit breakers. Each service has its own database: PostgreSQL for posts, MySQL for users, MongoDB for chat. Secrets are managed through HashiCorp Vault. Observability stack includes Prometheus with custom metrics, Grafana, distributed tracing via OpenTelemetry and Jaeger and Sentry for error monitoring. Covered by unit and integration tests with CI on GitHub Actions.",
         "tags": ["Java", "Spring Boot", "Microservices",
          "OpenAPI", "REST", "Hibernate",
          "Gradle", "JUnit", "Redis", "Kafka", "WebSocket",
-         "MySQL", "Docker", "JWT",
-         "ReactJS", "Prometheus", "Grafana"],
+         "MySQL", "PostgreSQL", "MongoDB", "Docker", "JWT",
+         "HashiCorp Vault", "Sentry", "OpenTelemetry", "Jaeger",
+         "Prometheus", "Grafana", "OpenFeign", "Resilience4j", "GitHub Actions"],
         "link": "https://github.com/knetsov91/social-network"
     },
     {

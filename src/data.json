@@ -82,6 +82,12 @@
         "tags": ["Azure", "GitHub Actions",
          "Terraform", "IaC"],
         "link": "https://github.com/knetsov91/azure-terraform"
+    },
+    {
+        "id": 10,
+        "name": "Social Network — React Frontend",
+        "description": "React 19 SPA for the Social Network backend. Handles login, registration, posting, following and real-time chat — STOMP over WebSocket powers messaging and a separate presence channel tracks who's online. Auth state is managed through a React context with protected routes. Sentry captures client-side errors.",
+        "tags": ["ReactJS", "WebSocket", "STOMP", "Axios", "React Router", "Sentry"],
+        "link": "https://github.com/knetsov91/social-network-react"
     }
-    
 ]

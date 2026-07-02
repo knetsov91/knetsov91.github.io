@@ -6,7 +6,10 @@ import { fetchRepoData, generateRepoUrl } from '../../utils/util';
 const Project = ({project}) => {
     const [createdAt, setCreatedAt] = useState('N/A')
     const [updatedAt, setUpdatedAt] = useState('N/A')
+    const [showDemo, setShowDemo] = useState(false);
+    const [activeGif, setActiveGif] = useState(0);
     const fetchUrl = generateRepoUrl(project.link);
+    const demoGifs = project.demoGifs || [];
 
     useEffect(() => {
        fetchRepoData(fetchUrl)
@@ -42,7 +45,37 @@ const Project = ({project}) => {
                     Part of: <a href={project.related.link} target="_blank">{project.related.name}</a>
                 </p>
             )}
-            <a href={project.link} target="_blank">View on GitHub</a>
+            <div className={style.links}>
+                <a href={project.link} target="_blank">View on GitHub</a>
+                {demoGifs.length > 0 && (
+                    <button
+                        type="button"
+                        className={style.demoToggle}
+                        onClick={() => { setShowDemo((prev) => !prev); setActiveGif(0); }}
+                    >
+                        {showDemo ? 'Hide demo' : 'Demo'}
+                    </button>
+                )}
+            </div>
+            {demoGifs.length > 0 && showDemo && (
+                <div className={style.demoSection}>
+                    <img src={demoGifs[activeGif]} alt={`${project.name} demo`} className={style.demoGif} />
+                    {demoGifs.length > 1 && (
+                        <div className={style.demoTabs}>
+                            {demoGifs.map((gif, i) => (
+                                <button
+                                    type="button"
+                                    key={gif}
+                                    className={`${style.demoTab} ${i === activeGif ? style.demoTabActive : ''}`}
+                                    onClick={() => setActiveGif(i)}
+                                >
+                                    {i + 1}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            )}
         </div>
     );
 }

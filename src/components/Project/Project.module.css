@@ -64,6 +64,12 @@
     box-sizing: border-box;
     overflow-wrap: break-word;
 }
+.related {
+    font-size: 0.9em;
+    color: #718096;
+    margin: 4px 0;
+}
+
 .project a {
     color: #2b6cb0;
     text-decoration: none;

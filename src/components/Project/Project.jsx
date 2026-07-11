@@ -37,6 +37,11 @@ const Project = ({project}) => {
                 </div>
             </div>
             <p className={style.description}>{project.description || <span>There is no description yet</span>}</p>
+            {project.related && (
+                <p className={style.related}>
+                    Part of: <a href={project.related.link} target="_blank">{project.related.name}</a>
+                </p>
+            )}
             <a href={project.link} target="_blank">View on GitHub</a>
         </div>
     );

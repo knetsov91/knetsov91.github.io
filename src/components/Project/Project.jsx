@@ -59,13 +59,16 @@ const Project = ({project}) => {
             </div>
             {demoGifs.length > 0 && showDemo && (
                 <div className={style.demoSection}>
-                    <img src={demoGifs[activeGif]} alt={`${project.name} demo`} className={style.demoGif} />
+                    <img src={demoGifs[activeGif].url} alt={`${project.name} demo`} className={style.demoGif} />
+                    {demoGifs[activeGif].description && (
+                        <p className={style.demoDescription}>{demoGifs[activeGif].description}</p>
+                    )}
                     {demoGifs.length > 1 && (
                         <div className={style.demoTabs}>
                             {demoGifs.map((gif, i) => (
                                 <button
                                     type="button"
-                                    key={gif}
+                                    key={gif.url}
                                     className={`${style.demoTab} ${i === activeGif ? style.demoTabActive : ''}`}
                                     onClick={() => setActiveGif(i)}
                                 >

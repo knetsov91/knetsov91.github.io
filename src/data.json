@@ -98,7 +98,12 @@
         "description": "React 19 SPA for the Social Network backend. Handles login, registration, posting, following and real-time chat — STOMP over WebSocket powers messaging and a separate presence channel tracks who's online. Auth state is managed through a React context with protected routes and Sentry captures client-side errors.",
         "tags": ["ReactJS", "WebSocket", "STOMP", "Axios", "React Router", "Sentry"],
         "related": { "name": "Social Network", "link": "https://github.com/knetsov91/social-network" },
-        "demoGifs": ["https://github.com/knetsov91/social-network-react/raw/dev/chats.gif"],
+        "demoGifs": [
+            {
+                "url": "https://github.com/knetsov91/social-network-react/raw/dev/chats.gif",
+                "description": "Register and login flow followed by real-time chat powered by WebSocket."
+            }
+        ],
         "link": "https://github.com/knetsov91/social-network-react"
     }
 ]

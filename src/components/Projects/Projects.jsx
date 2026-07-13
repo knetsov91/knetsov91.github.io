@@ -25,16 +25,23 @@ const Projects = () => {
 
     const handleFilter = (f) => {
         setFilter(f);
+        if (f === "all") setDemoOnly(false);
         setPage(1);
     };
 
     const handleDemoFilter = () => {
-        setDemoOnly(d => !d);
+        setDemoOnly(d => {
+            const next = !d;
+            if (next) setFilter("all");
+            return next;
+        });
         setPage(1);
     };
 
-    const countFor = (f) => f === "all" ? projects.length : projects.filter(p => p.type === f).length;
-    const demoCount = projects.filter(hasDemo).length;
+    const countFor = (f) => f === "all"
+        ? projects.length
+        : projects.filter(p => matchesType(p, f) && (!demoOnly || hasDemo(p))).length;
+    const demoCount = projects.filter(p => matchesType(p, filter) && hasDemo(p)).length;
 
     return (
         <>
@@ -46,7 +53,7 @@ const Projects = () => {
                         <button
                             key={f}
                             onClick={() => handleFilter(f)}
-                            className={filter === f ? style.active : ""}
+                            className={filter === f && !demoOnly ? style.active : ""}
                         >
                             {f} ({countFor(f)})
                         </button>

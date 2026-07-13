@@ -38,24 +38,29 @@ const Projects = () => {
 
     return (
         <>
-            <div className={style.filters}>
-                {FILTERS.map(f => (
+            <div className={style.filterSection}>
+                <p className={style.filterSectionLabel}>Filters</p>
+                <div className={style.filters}>
+                    <span className={style.filterLabel}>Type:</span>
+                    {FILTERS.map(f => (
+                        <button
+                            key={f}
+                            onClick={() => handleFilter(f)}
+                            className={filter === f ? style.active : ""}
+                        >
+                            {f} ({countFor(f)})
+                        </button>
+                    ))}
+                </div>
+                <div className={style.demoFilters}>
+                    <span className={style.filterLabel}>Demo:</span>
                     <button
-                        key={f}
-                        onClick={() => handleFilter(f)}
-                        className={filter === f ? style.active : ""}
+                        onClick={handleDemoFilter}
+                        className={demoOnly ? style.active : style.demoButton}
                     >
-                        {f} ({countFor(f)})
+                        has demo ({demoCount})
                     </button>
-                ))}
-            </div>
-            <div className={style.demoFilters}>
-                <button
-                    onClick={handleDemoFilter}
-                    className={demoOnly ? style.active : style.demoButton}
-                >
-                    has demo ({demoCount})
-                </button>
+                </div>
             </div>
             {visible.map(p => <Project project={p} key={p.id} />)}
             {totalPages > 1 && (

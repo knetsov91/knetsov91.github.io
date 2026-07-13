@@ -61,12 +61,12 @@ const Projects = () => {
                     ))}
                 </div>
                 <div className={style.demoFilters}>
-                    <span className={style.filterLabel}>Demo:</span>
+                    <span className={style.filterLabel}>Has Demo:</span>
                     <button
                         onClick={handleDemoFilter}
-                        className={demoOnly ? style.active : style.demoButton}
+                        className={demoOnly ? `${style.active} ${style.demoButtonActive}` : style.demoButton}
                     >
-                        has demo ({demoCount})
+                        Yes ({demoCount})
                     </button>
                 </div>
             </div>

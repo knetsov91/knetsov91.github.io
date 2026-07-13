@@ -9,6 +9,7 @@
          "MySQL", "PostgreSQL", "MongoDB", "Docker", "JWT",
          "HashiCorp Vault", "Sentry", "OpenTelemetry", "Jaeger",
          "Prometheus", "Grafana", "OpenFeign", "Resilience4j", "GitHub Actions"],
+        "type": "backend",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/social-network"
     },
@@ -20,6 +21,7 @@
          "Kafka", "PostgreSQL", "MongoDB",
          "Docker", "Traefik", "Consul",
          "Prometheus", "Grafana", "Elasticsearch", "Kibana"],
+        "type": "backend",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/e-shop"
     },
@@ -28,6 +30,7 @@
         "name": "Multimodal Search",
         "description": "The project follows a 3-tier architecture — Jinja2 templates on the presentation layer, FastAPI with a services layer handling business logic and PostgreSQL/Milvus/MinIO as the data tier. The backend is organized around an MVC pattern where endpoints act as controllers, SQLAlchemy models and Pydantic schemas handle the model layer and Jinja2 templates serve as views. Built a two-stage multimodal retrieval system in Python combining dense vector search with vision-language reranking. Each stage depends on an abstract interface — BaseRetrieval and BaseReranker — so the current models (CLIP for retrieval and Qwen3-VL-4B-Instruct for reranking) can be swapped out without changing the pipeline. The first stage uses CLIP model to encode text and image queries, fuses the similarity scores and retrieves top candidates from Milvus a vector database optimized for similarity search. The second stage runs Qwen3-VL-4B-Instruct with quantization to visually score each result against the original query. The whole system is containerized with Docker Compose with NVIDIA GPU support, uses FastAPI as the web framework, PostgreSQL for relational data and MinIO as S3-compatible object storage for images.",
         "tags": ["Python", "FastAPI", "PostgreSQL", "Docker", "GPU", "MVC", "Vector Search", "Multimodal", "Milvus", "MinIO", "AI"],
+        "type": "full-stack",
         "demoGifs": [
             {
                 "url": "https://github.com/knetsov91/multimodal_search/raw/demo/assets/text_image_combined_search.gif",
@@ -43,6 +46,7 @@
         "tags": ["Java", "Spring Boot", "Hibernate",
          "Gradle", "OpenAPI", "REST",
          "GitHub Actions", "JUnit", "PostgreSQL"],
+        "type": "full-stack",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/restaurant"
     },
@@ -53,6 +57,7 @@
         "tags": ["Python", "FastAPI", "PostgreSQL",
          "ReactJS", "SQLAlchemy", "JWT",
          "GitHub Actions", "Docker"],
+        "type": "full-stack",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/fastapi-react-postgresql"
     },
@@ -64,6 +69,7 @@
          "Gradle", "MySQL", "Docker",
          "Kubernetes", "GitHub Actions",
          "AWS", "IaC", "CDK", "SonarQube", "JUnit"],
+        "type": "full-stack",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/project-management"
     },
@@ -74,6 +80,7 @@
         "tags": ["Python", "FastAPI", "Pytest",
          "REST", "Docker", "PostgreSQL",
          "SQLAlchemy", "GitHub Actions", "ReactJS"],
+        "type": "full-stack",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/python-react-NER-project"
     },
@@ -85,6 +92,7 @@
          "JWT", "Angular", "MySQL",
          "Docker", "Azure", "Terraform",
          "IaC", "GitHub Actions"],
+        "type": "full-stack",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/angular-rest"
     },
@@ -94,6 +102,7 @@
         "description": "Infrastructure as Code project that provisions Azure cloud resources using Terraform for deploying a containerized application. Automated via GitHub Actions for repeatable, version-controlled deployments.",
         "tags": ["Azure", "GitHub Actions",
          "Terraform", "IaC"],
+        "type": "infrastructure",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/azure-terraform"
     },
@@ -102,6 +111,7 @@
         "name": "Social Network Frontend",
         "description": "React 19 SPA for the Social Network backend. Handles login, registration, posting, following and real-time chat — STOMP over WebSocket powers messaging and a separate presence channel tracks who's online. Auth state is managed through a React context with protected routes and Sentry captures client-side errors.",
         "tags": ["ReactJS", "WebSocket", "STOMP", "Axios", "React Router", "Sentry"],
+        "type": "frontend",
         "related": { "name": "Social Network", "link": "https://github.com/knetsov91/social-network" },
         "demoGifs": [
             {

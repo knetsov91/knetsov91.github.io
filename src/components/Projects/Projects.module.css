@@ -1,9 +1,35 @@
+.filterSection {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.filterSectionLabel {
+    margin: 0 0 12px;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #718096;
+    text-align: center;
+}
+
+.filterLabel {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #4a5568;
+}
+
 .filters {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 8px;
-    margin: 20px 0;
+    margin: 0 0 12px;
 }
 
 .filters button {
@@ -25,8 +51,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 8px;
-    margin: 0 0 20px;
+    margin: 0;
 }
 
 .demoButton {

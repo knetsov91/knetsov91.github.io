@@ -43,8 +43,13 @@
     cursor: pointer;
 }
 
-.filters button:hover {
+.filters button:hover:not(:disabled) {
     background-color: #bee3f8;
+}
+
+.filters button:disabled {
+    opacity: 0.4;
+    cursor: default;
 }
 
 .demoFilters {

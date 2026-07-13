@@ -10,12 +10,16 @@ const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [page, setPage] = useState(1);
     const [filter, setFilter] = useState("all");
+    const [demoOnly, setDemoOnly] = useState(false);
 
     useEffect(() => {
         setProjects(data);
     }, []);
 
-    const filtered = filter === "all" ? projects : projects.filter(p => p.type === filter);
+    const matchesType = (p, f) => f === "all" || p.type === f;
+    const hasDemo = (p) => p.demoGifs && p.demoGifs.length > 0;
+
+    const filtered = projects.filter(p => matchesType(p, filter) && (!demoOnly || hasDemo(p)));
     const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
     const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
@@ -24,7 +28,13 @@ const Projects = () => {
         setPage(1);
     };
 
+    const handleDemoFilter = () => {
+        setDemoOnly(d => !d);
+        setPage(1);
+    };
+
     const countFor = (f) => f === "all" ? projects.length : projects.filter(p => p.type === f).length;
+    const demoCount = projects.filter(hasDemo).length;
 
     return (
         <>
@@ -38,6 +48,14 @@ const Projects = () => {
                         {f} ({countFor(f)})
                     </button>
                 ))}
+            </div>
+            <div className={style.demoFilters}>
+                <button
+                    onClick={handleDemoFilter}
+                    className={demoOnly ? style.active : style.demoButton}
+                >
+                    has demo ({demoCount})
+                </button>
             </div>
             {visible.map(p => <Project project={p} key={p.id} />)}
             {totalPages > 1 && (

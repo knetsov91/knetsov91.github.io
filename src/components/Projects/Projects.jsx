@@ -53,6 +53,7 @@ const Projects = () => {
                         <button
                             key={f}
                             onClick={() => handleFilter(f)}
+                            disabled={demoOnly && countFor(f) === 0}
                             className={filter === f && !demoOnly ? style.active : ""}
                         >
                             {f} ({countFor(f)})

@@ -76,6 +76,12 @@
     background-color: #ebf8ff;
 }
 
+.demoButtonActive {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
 .pagination {
     display: flex;
     justify-content: center;

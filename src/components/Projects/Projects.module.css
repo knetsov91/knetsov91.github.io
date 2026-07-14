@@ -1,9 +1,35 @@
+.filterSection {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.filterSectionLabel {
+    margin: 0 0 12px;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #718096;
+    text-align: center;
+}
+
+.filterLabel {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #4a5568;
+}
+
 .filters {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 8px;
-    margin: 20px 0;
+    margin: 0 0 12px;
 }
 
 .filters button {
@@ -17,8 +43,43 @@
     cursor: pointer;
 }
 
-.filters button:hover {
+.filters button:hover:not(:disabled) {
     background-color: #bee3f8;
+}
+
+.filters button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.demoFilters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.demoButton {
+    padding: 8px 14px;
+    border: 1px solid #2b6cb0;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #2b6cb0;
+    font-size: 1em;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.demoButton:hover {
+    background-color: #ebf8ff;
+}
+
+.demoButtonActive {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
 .pagination {

@@ -10,34 +10,65 @@ const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [page, setPage] = useState(1);
     const [filter, setFilter] = useState("all");
+    const [demoOnly, setDemoOnly] = useState(false);
 
     useEffect(() => {
         setProjects(data);
     }, []);
 
-    const filtered = filter === "all" ? projects : projects.filter(p => p.type === filter);
+    const matchesType = (p, f) => f === "all" || p.type === f;
+    const hasDemo = (p) => p.demoGifs && p.demoGifs.length > 0;
+
+    const filtered = projects.filter(p => matchesType(p, filter) && (!demoOnly || hasDemo(p)));
     const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
     const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
     const handleFilter = (f) => {
         setFilter(f);
+        if (f === "all") setDemoOnly(false);
         setPage(1);
     };
 
-    const countFor = (f) => f === "all" ? projects.length : projects.filter(p => p.type === f).length;
+    const handleDemoFilter = () => {
+        setDemoOnly(d => {
+            const next = !d;
+            if (next) setFilter("all");
+            return next;
+        });
+        setPage(1);
+    };
+
+    const countFor = (f) => f === "all"
+        ? projects.length
+        : projects.filter(p => matchesType(p, f) && (!demoOnly || hasDemo(p))).length;
+    const demoCount = projects.filter(p => matchesType(p, filter) && hasDemo(p)).length;
 
     return (
         <>
-            <div className={style.filters}>
-                {FILTERS.map(f => (
+            <div className={style.filterSection}>
+                <p className={style.filterSectionLabel}>Filters</p>
+                <div className={style.filters}>
+                    <span className={style.filterLabel}>Type:</span>
+                    {FILTERS.map(f => (
+                        <button
+                            key={f}
+                            onClick={() => handleFilter(f)}
+                            disabled={demoOnly && countFor(f) === 0}
+                            className={filter === f && !demoOnly ? style.active : ""}
+                        >
+                            {f} ({countFor(f)})
+                        </button>
+                    ))}
+                </div>
+                <div className={style.demoFilters}>
+                    <span className={style.filterLabel}>Has Demo:</span>
                     <button
-                        key={f}
-                        onClick={() => handleFilter(f)}
-                        className={filter === f ? style.active : ""}
+                        onClick={handleDemoFilter}
+                        className={demoOnly ? `${style.active} ${style.demoButtonActive}` : style.demoButton}
                     >
-                        {f} ({countFor(f)})
+                        Yes ({demoCount})
                     </button>
-                ))}
+                </div>
             </div>
             {visible.map(p => <Project project={p} key={p.id} />)}
             {totalPages > 1 && (

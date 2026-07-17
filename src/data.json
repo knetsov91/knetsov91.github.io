@@ -132,5 +132,14 @@
             }
         ],
         "link": "https://github.com/knetsov91/social-network-react"
+    },
+    {
+        "id": 11,
+        "name": "Portfolio Site",
+        "description": "This portfolio site itself — a React 19 SPA that renders a paginated, filterable list of project cards (by type and demo availability) from a static data file, with state managed via React hooks. Each card enriches itself with live GitHub metadata (created/updated dates) fetched via Axios at runtime from that project's own repo. Deployed to GitHub Pages.",
+        "tags": ["React", "Axios", "CSS", "Git", "GitHub Pages"],
+        "type": "frontend",
+        "demoGifs": [],
+        "link": "https://github.com/knetsov91/knetsov91.github.io"
     }
 ]

@@ -35,6 +35,18 @@
             {
                 "url": "https://github.com/knetsov91/multimodal_search/raw/demo/assets/text_image_combined_search.gif",
                 "description": "Text, image and combined search over a recipe collection — CLIP embeddings + Milvus vector search."
+            },
+            {
+                "url": "https://github.com/knetsov91/multimodal_search/raw/dev/assets/recipe_create_demo.gif",
+                "description": "Creating a recipe as admin. Milvus, MinIO and Flower are each checked in their own tab before submission to confirm the record, image and task don't exist yet, then checked again after to confirm the async Celery pipeline created all three."
+            },
+            {
+                "url": "https://github.com/knetsov91/multimodal_search/raw/dev/assets/recipe_edit_demo.gif",
+                "description": "Editing a recipe as admin. The text change is verified directly against Milvus via Attu before and after the edit, and against Flower to confirm the Celery task that reprocesses the embedding actually ran."
+            },
+            {
+                "url": "https://github.com/knetsov91/multimodal_search/raw/dev/assets/recipe_delete_demo.gif",
+                "description": "Deleting a recipe as admin. Milvus and the MinIO console are checked before and after the deletion to confirm both the vector record and the underlying image file are fully removed, not just hidden from the UI."
             }
         ],
         "link": "https://github.com/knetsov91/multimodal_search"

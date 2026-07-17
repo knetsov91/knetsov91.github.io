@@ -53,7 +53,9 @@ const Project = ({project}) => {
                         className={style.demoToggle}
                         onClick={() => { setShowDemo((prev) => !prev); setActiveGif(0); }}
                     >
-                        {showDemo ? 'Hide demo' : 'Demo'}
+                        {showDemo
+                            ? 'Hide demo'
+                            : `Demo | ${demoGifs.length} example${demoGifs.length > 1 ? 's' : ''}`}
                     </button>
                 )}
             </div>

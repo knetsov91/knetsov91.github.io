@@ -18,6 +18,10 @@
             {
                 "url": "https://github.com/knetsov91/social-network/raw/dev/assets/jvm-metrics-demo.mp4",
                 "description": "Self-made Grafana dashboard tracking JVM metrics (heap/non-heap memory, GC activity, thread count, open file descriptors) across microservices, recorded while sending live user registration requests through api-gateway to user-service."
+            },
+            {
+                "url": "https://github.com/knetsov91/social-network/raw/dev/assets/jaeger-trace-detail.png",
+                "description": "Jaeger UI trace detail view showing span nesting from api-gateway into user-service for a single follow request."
             }
         ],
         "link": "https://github.com/knetsov91/social-network"

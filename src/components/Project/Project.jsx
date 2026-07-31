@@ -61,7 +61,16 @@ const Project = ({project}) => {
             </div>
             {demoGifs.length > 0 && showDemo && (
                 <div className={style.demoSection}>
-                    <img src={demoGifs[activeGif].url} alt={`${project.name} demo`} className={style.demoGif} />
+                    {demoGifs[activeGif].url.endsWith('.mp4') ? (
+                        <video
+                            key={demoGifs[activeGif].url}
+                            src={demoGifs[activeGif].url}
+                            className={style.demoGif}
+                            controls
+                        />
+                    ) : (
+                        <img src={demoGifs[activeGif].url} alt={`${project.name} demo`} className={style.demoGif} />
+                    )}
                     {demoGifs[activeGif].description && (
                         <p className={style.demoDescription}>{demoGifs[activeGif].description}</p>
                     )}

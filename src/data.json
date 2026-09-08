@@ -26,10 +26,6 @@
             {
                 "url": "/assets/demos/social-network/jaeger-trace-cross-service-login.png",
                 "description": "Jaeger UI trace detail for a login request spanning api-gateway and user-service, with auth-service intentionally stopped — the trace shows the request nested across both services and pinpoints the exact span where it stalled waiting on token issuance before failing."
-            },
-            {
-                "url": "/assets/demos/social-network/sentry-auth-logs.png",
-                "description": "Structured logging with Sentry on the auth service — failed logins and registrations logged with trace IDs, payload size, and severity, making it easy to pinpoint the exact request behind a failure."
             }
         ],
         "link": "https://github.com/knetsov91/social-network"

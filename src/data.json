@@ -22,6 +22,10 @@
             {
                 "url": "/assets/demos/social-network/jaeger-trace-detail.png",
                 "description": "Jaeger UI trace detail view showing span nesting from api-gateway into user-service for a single follow request."
+            },
+            {
+                "url": "/assets/demos/social-network/jaeger-trace-cross-service-login.png",
+                "description": "Jaeger UI trace detail for a login request spanning api-gateway and user-service, with auth-service intentionally stopped — the trace shows the request nested across both services and pinpoints the exact span where it stalled waiting on token issuance before failing."
             }
         ],
         "link": "https://github.com/knetsov91/social-network"
@@ -29,13 +33,18 @@
     {
         "id": 2,
         "name": "E-Shop",
-        "description": "Backend e-commerce REST API with three Spring Boot microservices, each with its own database. Order service implements CQRS — PostgreSQL for writes, MongoDB for reads, synced via Kafka. Services self-register with Consul and Traefik acts as the API gateway routing requests to the appropriate service. Unit tests with JUnit 5 and Mockito. Two Docker Compose environments for dev and prod, with observability in prod — Prometheus, Grafana and ELK log aggregation.",
+        "description": "Backend e-commerce REST API with three Spring Boot microservices, each with its own database. Order service implements CQRS — PostgreSQL for writes, MongoDB for reads, synced via Kafka. Services self-register with Consul and Traefik acts as the API gateway routing requests to the appropriate service. Unit tests with JUnit 5 and Mockito. Two Docker Compose environments for dev and prod, with observability in prod — Prometheus, Grafana, ELK log aggregation and Sentry for error monitoring.",
         "tags": ["Java", "Spring Boot", "Microservices",
          "Kafka", "PostgreSQL", "MongoDB",
          "Docker", "Traefik", "Consul",
-         "Prometheus", "Grafana", "Elasticsearch", "Kibana"],
+         "Prometheus", "Grafana", "Elasticsearch", "Kibana", "Sentry"],
         "type": "backend",
-        "demoGifs": [],
+        "demoGifs": [
+            {
+                "url": "/assets/demos/e-shop/order-creation-trace-waterfall.png",
+                "description": "Sentry trace waterfall for a POST /api/v1/orders request, with three custom child spans — persisting the order to PostgreSQL, writing the CQRS read-model projection to MongoDB, and writing the outbox event that a separate poller later publishes to Kafka — each broken out with its own duration instead of one opaque request span."
+            }
+        ],
         "link": "https://github.com/knetsov91/e-shop"
     },
     {
@@ -69,7 +78,7 @@
         "name": "Restaurant management",
         "description": "Restaurant management system built with Java 17 and Spring Boot. Works alongside a separate order-service, communicating synchronously via OpenFeign with scheduled polling. Access control is handled by Spring Security 6 with role-based permissions. Data is persisted in PostgreSQL through Hibernate/Spring Data JPA. Covered by unit, integration, and web layer tests, with a GitHub Actions pipeline running on every push and dockerized for deployment.",
         "tags": ["Java", "Spring Boot", "Hibernate",
-         "Gradle", "OpenAPI", "REST",
+         "Gradle", "OpenAPI", "REST", "Spring Security",
          "GitHub Actions", "JUnit", "PostgreSQL"],
         "type": "full-stack",
         "demoGifs": [],
@@ -142,6 +151,10 @@
             {
                 "url": "/assets/demos/social-network-react/chats.gif",
                 "description": "Register and login flow followed by real-time chat powered by WebSocket."
+            },
+            {
+                "url": "/assets/demos/social-network-react/sentry-auth-logs.png",
+                "description": "Structured logging with Sentry on the auth service — failed logins and registrations logged with trace IDs, payload size, and severity, making it easy to pinpoint the exact request behind a failure."
             }
         ],
         "link": "https://github.com/knetsov91/social-network-react"

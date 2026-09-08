@@ -33,11 +33,11 @@
     {
         "id": 2,
         "name": "E-Shop",
-        "description": "Backend e-commerce REST API with three Spring Boot microservices, each with its own database. Order service implements CQRS — PostgreSQL for writes, MongoDB for reads, synced via Kafka. Services self-register with Consul and Traefik acts as the API gateway routing requests to the appropriate service. Unit tests with JUnit 5 and Mockito. Two Docker Compose environments for dev and prod, with observability in prod — Prometheus, Grafana and ELK log aggregation.",
+        "description": "Backend e-commerce REST API with three Spring Boot microservices, each with its own database. Order service implements CQRS — PostgreSQL for writes, MongoDB for reads, synced via Kafka. Services self-register with Consul and Traefik acts as the API gateway routing requests to the appropriate service. Unit tests with JUnit 5 and Mockito. Two Docker Compose environments for dev and prod, with observability in prod — Prometheus, Grafana, ELK log aggregation and Sentry for error monitoring.",
         "tags": ["Java", "Spring Boot", "Microservices",
          "Kafka", "PostgreSQL", "MongoDB",
          "Docker", "Traefik", "Consul",
-         "Prometheus", "Grafana", "Elasticsearch", "Kibana"],
+         "Prometheus", "Grafana", "Elasticsearch", "Kibana", "Sentry"],
         "type": "backend",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/e-shop"

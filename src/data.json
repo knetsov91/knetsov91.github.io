@@ -151,6 +151,10 @@
             {
                 "url": "/assets/demos/social-network-react/chats.gif",
                 "description": "Register and login flow followed by real-time chat powered by WebSocket."
+            },
+            {
+                "url": "/assets/demos/social-network-react/sentry-auth-logs.png",
+                "description": "Structured logging with Sentry on the auth service — failed logins and registrations logged with trace IDs, payload size, and severity, making it easy to pinpoint the exact request behind a failure."
             }
         ],
         "link": "https://github.com/knetsov91/social-network-react"

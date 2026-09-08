@@ -22,6 +22,10 @@
             {
                 "url": "/assets/demos/social-network/jaeger-trace-detail.png",
                 "description": "Jaeger UI trace detail view showing span nesting from api-gateway into user-service for a single follow request."
+            },
+            {
+                "url": "/assets/demos/social-network/jaeger-trace-cross-service-login.png",
+                "description": "Jaeger UI trace detail for a login request spanning api-gateway and user-service, with auth-service intentionally stopped — the trace shows the request nested across both services and pinpoints the exact span where it stalled waiting on token issuance before failing."
             }
         ],
         "link": "https://github.com/knetsov91/social-network"

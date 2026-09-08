@@ -39,7 +39,12 @@
          "Docker", "Traefik", "Consul",
          "Prometheus", "Grafana", "Elasticsearch", "Kibana", "Sentry"],
         "type": "backend",
-        "demoGifs": [],
+        "demoGifs": [
+            {
+                "url": "/assets/demos/e-shop/order-creation-trace-waterfall.png",
+                "description": "Sentry trace waterfall for a POST /api/v1/orders request, with three custom child spans — persisting the order to PostgreSQL, writing the CQRS read-model projection to MongoDB, and writing the outbox event that a separate poller later publishes to Kafka — each broken out with its own duration instead of one opaque request span."
+            }
+        ],
         "link": "https://github.com/knetsov91/e-shop"
     },
     {

@@ -8,7 +8,8 @@
          "Gradle", "JUnit", "Redis", "Kafka", "WebSocket",
          "MySQL", "PostgreSQL", "MongoDB", "Docker", "JWT",
          "HashiCorp Vault", "Sentry", "OpenTelemetry", "Jaeger",
-         "Prometheus", "Grafana", "OpenFeign", "Resilience4j", "GitHub Actions"],
+         "Prometheus", "Grafana", "OpenFeign", "Resilience4j", "GitHub Actions",
+         "Spring Security", "K6"],
         "type": "backend",
         "demoGifs": [
             {

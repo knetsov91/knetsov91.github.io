@@ -168,5 +168,14 @@
         "type": "frontend",
         "demoGifs": [],
         "link": "https://github.com/knetsov91/knetsov91.github.io"
+    },
+    {
+        "id": 12,
+        "name": "Project & Task Management REST API",
+        "description": "A C# and ASP.NET Core REST API for managing users, projects and tasks. Built with a layered architecture, Entity Framework Core and SQL Server with Docker Compose and unit tests using xUnit and Moq. Features include project ownership, task assignment, priorities, due dates and controlled status transitions.",
+        "tags": ["C#", ".NET 10", "ASP.NET Core", "REST API", "Entity Framework Core", "SQL Server", "Docker Compose", "xUnit", "Moq", "OpenAPI", "Dependency Injection", "Async/Await", "GitHub Actions"],
+        "type": "backend",
+        "demoGifs": [],
+        "link": "https://github.com/knetsov91/task_project_management"
     }
 ]
